@@ -1,0 +1,107 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.testimonials {
+  padding: 60px 0 0 0;
+
+  @include respond-to(sm) {
+    padding: 120px 0 0 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    position: relative;
+    margin: 0 auto;
+
+    .heading {
+      margin: 0 auto 40px auto;
+      width: 100%;
+      max-width: 634px;
+
+      @include respond-to(sm) {
+        margin-bottom: 60px;
+        width: 74%;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      h2 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 37px;
+        text-align: center;
+      }
+    }
+
+    .narrow-wrapper {
+      margin: 0 auto;
+      width: 89%;
+
+      &--flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        @include respond-to(sm) {
+          flex-direction: row;
+        }
+
+        .testimonial-col {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+          width: 100%;
+          max-width: 350px;
+          border: 1px solid #88969d;
+          border-bottom: none;
+
+          @include respond-to(sm) {
+            justify-content: space-between;
+            width: 33.33%;
+          }
+
+          .testimonial {
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            justify-content: center;
+            padding: 50px 25px;
+            height: auto;
+            border-bottom: 1px solid #88969d;
+
+            p {
+              text-align: center;
+              margin-bottom: 10px;
+            }
+
+            .stars {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              img {
+                width: 15px;
+              }
+            }
+
+            .top-margin {
+              margin-top: 10px;
+
+              .title {
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.exp {
+  padding: 60px 0;
+
+  @include respond-to(xsm) {
+    padding: 80px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 120px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+      }
+
+      .left {
+        margin-bottom: 30px;
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+          margin-bottom: none;
+          position: static;
+        }
+
+        @include respond-to(sm) {
+          padding-right: 40px;
+        }
+
+        .sticky {
+          position: sticky;
+          top: 80px;
+
+          p {
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 12px;
+            color: #4d565b;
+            text-align: left;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+          }
+
+          .quote {
+            padding: 10px 20px 10px 0;
+            margin-bottom: 10px;
+            font-family: "Cormorant Garamond";
+            font-weight: 400;
+            font-size: 35px;
+            color: #4d565b;
+            text-align: left;
+            font-style: italic;
+            line-height: 1.2;
+          }
+
+          .signature {
+            img {
+              display: inline-block;
+              width: 189px;
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+        }
+
+        .info {
+          p {
+            margin-bottom: 10px;
+            font-family: "Cormorant Garamond";
+            font-weight: 400;
+            font-size: 25px;
+            color: #4d565b;
+            text-align: left;
+            line-height: 1.2;
+          }
+
+          .img {
+            border-bottom: 10px;
+
+            img {
+              display: inline-block;
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,157 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding: 60px 0 90px 0;
+  background: #88969d;
+
+  @include respond-to(xsm) {
+    padding: 80px 0 90px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    position: relative;
+    margin: 0 auto;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+        }
+
+        .contact-col {
+          width: 82%;
+
+          h3 {
+            margin: 20px 0 10px 0;
+            font-family: "Cormorant Garamond";
+            font-weight: 400;
+            font-size: 35px;
+            color: #fff;
+            text-align: left;
+          }
+
+          .top-margin {
+            margin-top: 20px;
+
+            p {
+              font-family: "Roboto";
+              font-size: 15px;
+              color: #fff;
+              text-align: left;
+            }
+          }
+        }
+      }
+
+      .form-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 20px;
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+        }
+
+        .title {
+          color: #fff;
+          text-align: left !important;
+        }
+
+        form {
+          display: flex;
+          // flex-direction: column;
+          align-items: stretch;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          margin-top: 15px;
+          width: 100%;
+
+          input {
+            padding: 8px 12px;
+            margin-bottom: 20px;
+            width: 48%;
+            height: 48px;
+            border: 1px solid #fff;
+            background: transparent;
+            color: #fff;
+            font-family: "Roboto";
+            font-size: 12px;
+            text-transform: uppercase;
+          }
+
+          .email-input {
+            width: 100%;
+          }
+
+          .phone-input {
+            width: 100%;
+          }
+
+          textarea {
+            padding: 20px 12px 73px 12px;
+            margin-bottom: 20px;
+            width: 100%;
+            height: 48px;
+            background: transparent;
+            color: #fff;
+            font-family: "Roboto";
+            font-size: 12px;
+            text-transform: uppercase;
+            border: 1px solid #fff;
+            overflow: hidden;
+          }
+
+          .submit {
+            padding: 15px 28px 11px 28px;
+            width: 100%;
+            height: 50px;
+            max-width: 100%;
+            font-family: "Roboto";
+            font-weight: 500;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.3;
+            background: #fff;
+            border: none;
+            color: #88969d;
+            transition-duration: 0.4s;
+
+            &:hover {
+              background: #88969d;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

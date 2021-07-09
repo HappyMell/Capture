@@ -1,0 +1,212 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.gallery {
+  padding: 60px 0 90px 0;
+  background: #eff3fa;
+
+  @include respond-to(xsm) {
+    padding: 100px 0 90px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 185px 0 90px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1156px;
+    position: relative;
+    margin: 0 auto;
+
+    .heading {
+      margin: 65px auto 40px auto;
+      width: 80%;
+      max-width: 476px;
+      position: sticky;
+      top: 100px;
+      left: 0%;
+      right: 0%;
+      bottom: auto;
+      z-index: 10;
+
+      @include respond-to(xsm) {
+        width: 60%;
+      }
+
+      @include respond-to(sm) {
+        margin: 65px auto 0 auto;
+        width: 54%;
+      }
+
+      @include respond-to(md) {
+        width: 43%;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      h3 {
+        margin: 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 45px;
+        color: #4d565b;
+        text-align: center;
+
+        @include respond-to(sm) {
+          font-size: 55px;
+        }
+
+        @include respond-to(md) {
+          font-size: 60px;
+        }
+      }
+    }
+
+    .picture-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: -350px;
+      height: 630px;
+      position: relative;
+
+      @include respond-to(xsm) {
+        height: 1000px;
+      }
+
+      @include respond-to(sm) {
+        height: 1250px;
+      }
+
+      @include respond-to(md) {
+        margin-top: -429px;
+      }
+
+      .image-one {
+        width: 30%;
+        height: auto;
+        position: absolute;
+        top: 10%;
+        left: -14%;
+        right: auto;
+        bottom: auto;
+
+        @include respond-to(xsm) {
+          left: -8%;
+        }
+
+        @include respond-to(sm) {
+          top: -1%;
+          left: -6%;
+        }
+
+        @include respond-to(md) {
+          top: 13%;
+          left: -2%;
+          width: 26%;
+        }
+      }
+
+      .image-two {
+        margin-left: 26px;
+        width: 47%;
+        height: auto;
+        position: absolute;
+        top: 53%;
+        left: 0%;
+        right: auto;
+        bottom: auto;
+
+        @include respond-to(xsm) {
+          top: 40%;
+        }
+
+        @include respond-to(md) {
+          top: 38%;
+          left: 26%;
+          width: 34%;
+        }
+      }
+
+      .image-three {
+        width: 38%;
+        height: auto;
+        position: absolute;
+        top: -3%;
+        left: auto;
+        right: 0%;
+        bottom: auto;
+
+        @include respond-to(xsm) {
+          top: 3%;
+        }
+
+        @include respond-to(md) {
+          top: 0%;
+          right: 0%;
+          left: auto;
+          bottom: auto;
+        }
+      }
+
+      .image-five {
+        margin-left: 121px;
+        width: 40%;
+        position: absolute;
+        left: -193px;
+        top: 70%;
+        right: auto;
+        bottom: auto;
+
+        @include respond-to(md) {
+          width: 30%;
+          left: -120px;
+          top: 65%;
+        }
+      }
+
+      .image-six {
+        margin-left: 26px;
+        width: 56%;
+        position: absolute;
+        top: auto;
+        left: auto;
+        right: 3%;
+        bottom: 3%;
+
+        @include respond-to(sm) {
+          bottom: 11%;
+        }
+
+        @include respond-to(md) {
+          right: 12%;
+          width: 40%;
+        }
+      }
+
+      .image-four {
+        width: 38%;
+        position: absolute;
+        top: 48%;
+        left: auto;
+        right: -5%;
+        bottom: auto;
+
+        @include respond-to(sm) {
+          top: 31%;
+          right: 0%;
+        }
+
+        @include respond-to(md) {
+          width: 25%;
+        }
+      }
+    }
+  }
+}

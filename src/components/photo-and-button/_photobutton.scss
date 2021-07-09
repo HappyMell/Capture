@@ -1,0 +1,100 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.photobutton {
+  background: #eff3fa;
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    z-index: 1;
+    margin: 0 auto;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+      }
+
+      .image {
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+          overflow: hidden;
+        }
+
+        img {
+          display: inline-block;
+          width: 100%;
+
+          @include respond-to(xsm) {
+            height: 120%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0 45px 0;
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+          padding: 45px 40px;
+        }
+
+        &__wrapper {
+          margin: 20px 0 10px 0;
+          h3 {
+            font-family: "Cormorant Garamond";
+            font-size: 35px;
+            color: #4d565b;
+            text-align: left;
+          }
+
+          p {
+            margin-bottom: 10px;
+            font-family: "Cormorant Garamond";
+            font-size: 25px;
+            color: #4d565b;
+          }
+
+          .top-margin {
+            margin-top: 30px;
+
+            .learn-more {
+              padding: 15px 28px 11px 28px;
+              min-width: 185px;
+              min-height: 42px;
+              font-family: "Roboto";
+              font-size: 12px;
+              color: #fff;
+              text-align: center;
+              letter-spacing: 0.3px;
+              text-transform: uppercase;
+              background-color: #4d565b;
+              border: none;
+              transition-duration: 0.4s;
+
+              &:hover {
+                background: #424a4e;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

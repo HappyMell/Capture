@@ -1,0 +1,52 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.faq {
+  padding: 60px 0 0 0;
+
+  @include respond-to(sm) {
+    padding-top: 120px;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+
+    .heading {
+      margin: 0 auto 40px auto;
+      width: 100%;
+      max-width: 634px;
+
+      @include respond-to(sm) {
+        margin-bottom: 60px;
+        width: 74%;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      h2 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 37px;
+        color: #4d565b;
+        text-align: center;
+      }
+    }
+
+    .narrow-wrapper {
+      margin: 0 auto;
+      width: 89%;
+      background: transparent;
+    }
+
+    .top-margin {
+      margin-top: 30px;
+    }
+  }
+}

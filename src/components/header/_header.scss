@@ -1,0 +1,152 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.header {
+  padding-top: 60px;
+  min-height: 590px;
+  position: relative;
+
+  @include respond-to(xsm) {
+    min-height: 700px;
+  }
+
+  @include respond-to(sm) {
+    min-height: 850px;
+  }
+
+  .slider {
+    height: 100%;
+    position: absolute;
+    // top: 60px;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    color: #ddd;
+    z-index: 2;
+
+    .sliderItem {
+      position: relative;
+      height: 590px;
+
+      @include respond-to(xsm) {
+        height: 695px;
+      }
+
+      @include respond-to(sm) {
+        height: 914px;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .content-wrapper {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 25px;
+    height: 100%;
+    max-width: 1075px;
+    min-height: 590px;
+    z-index: 2;
+
+    @include respond-to(xsm) {
+      min-height: 700px;
+    }
+
+    @include respond-to(sm) {
+      min-height: 850px;
+    }
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 590px;
+
+      @include respond-to(xsm) {
+        height: 100%;
+        min-height: 700px;
+      }
+
+      @include respond-to(md) {
+        min-height: 850px;
+      }
+
+      p {
+        font-family: "Roboto";
+        font-weight: 500;
+        font-size: 12px;
+        color: #fff;
+        text-align: center;
+        letter-spacing: 0.3px;
+        text-transform: uppercase;
+      }
+
+      .sliderWelcome {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: "Cormorant Garamond";
+
+        @include respond-to(xsm) {
+          width: 90%;
+        }
+
+        @include respond-to(sm) {
+          width: 80%;
+        }
+
+        @include respond-to(md) {
+          width: 57%;
+        }
+
+        h1 {
+          margin: 20px 0 10px 0;
+          font-size: 60px;
+          text-align: center;
+
+          @include respond-to(sm) {
+            font-size: 70px;
+          }
+        }
+
+        .signature {
+          margin-top: 20px;
+          position: relative;
+
+          img {
+            width: 226px;
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-down {
+    padding: 20px 0;
+    z-index: 2;
+    position: absolute;
+    top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+
+    p {
+      font-family: "Roboto";
+      font-weight: 500;
+      font-size: 13px;
+      color: #fff;
+      text-align: center;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+  }
+}

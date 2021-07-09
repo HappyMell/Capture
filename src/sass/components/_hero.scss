@@ -1,0 +1,118 @@
+.hero {
+  padding-top: 60px;
+  min-height: 590px;
+  position: relative;
+
+  .glide {
+    position: absolute;
+    &__slides {
+      transform: none !important;
+      width: auto !important;
+      display: block;
+      height: 590px;
+    }
+
+    &__slide {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position-x: center;
+      left: 0;
+      top: 0;
+      opacity: 0;
+      transition: opacity 1s;
+
+      &:first-child {
+        position: relative;
+      }
+
+      &--active {
+        z-index: 1;
+        opacity: 1;
+      }
+    }
+
+    &__arrow {
+      box-shadow: none;
+      border: none;
+      position: absolute;
+      &--left {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        margin: 305px 20px;
+      }
+      &--right {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        margin: 305px 20px;
+      }
+    }
+  }
+
+  &__wrapper {
+    margin: 0 auto;
+    position: relative;
+    padding: 0 25px;
+    height: 100%;
+    max-width: 1075px;
+    min-height: 590px;
+    z-index: 1;
+
+    &--flex {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      min-height: 590px;
+
+      .center-content {
+        .title {
+          font-family: "Roboto";
+          font-weight: 500;
+          color: #fff;
+          text-align: center;
+          letter-spacing: 0.3px;
+        }
+        .block {
+          h1 {
+            margin: 20px 0 10px 0;
+            font-size: 60px;
+            font-weight: 400;
+            color: #fff;
+            text-align: center;
+          }
+
+          .top-margin {
+            text-align: center;
+            img {
+              display: inline-block;
+              vertical-align: middle;
+              width: 225.5px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .scroll-down > p {
+    padding: 20px 0;
+    position: absolute;
+    top: auto;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 10;
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+}

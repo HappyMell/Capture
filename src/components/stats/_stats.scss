@@ -1,0 +1,113 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.stats {
+  padding-top: 60px;
+  position: relative;
+  background: #eff3fa;
+
+  @include respond-to(xsm) {
+    padding-top: 80px;
+  }
+
+  @include respond-to(sm) {
+    padding-top: 90px;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        width: 100%;
+        border-bottom: 1px solid #88969d;
+
+        @include respond-to(xsm) {
+          width: 62px;
+          margin-right: 50px;
+          margin-bottom: unset;
+          border-bottom: unset;
+          border-right: 1px solid #88969d;
+          text-align: center;
+        }
+
+        h4 {
+          //  display: block;
+          position: relative;
+          left: -10px;
+          font-family: "Cormorant Garamond";
+          font-weight: 400;
+          font-size: 32px;
+          color: #4d565b;
+          text-align: center;
+
+          @include respond-to(xsm) {
+            margin: 10px 0;
+            transform: rotate(-90deg);
+            width: 268%;
+          }
+        }
+      }
+
+      .right {
+        margin: 25px 0;
+
+        .numbers-container {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          padding-bottom: 20px;
+          margin-bottom: 50px;
+          border-bottom: 1px solid #88969d;
+
+          @include respond-to(xsm) {
+            flex-direction: row;
+            border: unset;
+          }
+
+          .numbers-item {
+            margin-bottom: 40px;
+            width: 100%;
+
+            @include respond-to(xsm) {
+              width: 50%;
+              padding-right: 40px;
+              margin-bottom: unset;
+            }
+
+            .number {
+              font-family: "Roboto";
+              font-size: 40px;
+            }
+
+            .top-margin {
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

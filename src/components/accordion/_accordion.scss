@@ -1,0 +1,62 @@
+.accordion-wrapper {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #88969d;
+
+  .accordion-trigger {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    //flex-wrap: wrap;
+    padding: 0 5px 5px 22px;
+    width: 100%;
+    cursor: pointer;
+
+    .flex-no-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      h3 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 25px;
+        color: #4d565b;
+      }
+    }
+
+    .open-close-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 20px 15px 0 0;
+      border-radius: 3px;
+      height: 28px;
+      transition: all 0.35s ease;
+
+      img {
+        width: 15px;
+
+        &[aria-expanded="true"] {
+          transform: rotateZ(90deg);
+        }
+      }
+    }
+  }
+
+  .accordion-content {
+    margin-top: -1px;
+    padding: 0 25px 0 22px;
+    overflow: hidden;
+    max-height: 1000px;
+    transition: max-height 1s ease-in-out;
+
+    &[aria-expanded="true"] {
+      max-height: 0px;
+      transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.gallery-two {
+  padding: 60px 0;
+
+  @include respond-to(sm) {
+    padding: 120px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    position: relative;
+    margin: 0 auto;
+
+    .heading {
+      margin: 0 auto 40px auto;
+      width: 100%;
+      max-width: 634px;
+
+      @include respond-to(sm) {
+        margin-bottom: 60px;
+        width: 74%;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      h2 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 37px;
+        color: #4d565b;
+        text-align: center;
+      }
+    }
+
+    .gallery-box > div {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+
+      img {
+        height: 100%;
+      }
+
+      .top-margin:first-child {
+        width: 68.2%;
+        margin-bottom: 3px;
+        overflow: hidden;
+
+        @include respond-to(sm) {
+          width: 67.8%;
+          margin-bottom: 10px;
+        }
+      }
+
+      .top-margin:nth-child(2) {
+        margin-bottom: 3px;
+        width: 31%;
+
+        @include respond-to(sm) {
+          margin-bottom: 10px;
+        }
+      }
+
+      .top-margin:nth-child(3) {
+        margin-bottom: 3px;
+        width: 68.2%;
+      }
+
+      .top-margin:nth-child(5) {
+        margin-bottom: 3px;
+        width: 68.2%;
+      }
+
+      .top-margin:nth-child(6) {
+        margin-bottom: 3px;
+        width: 31%;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: space-between;
+        width: 31%;
+
+        .top-margin:first-child {
+          width: 100%;
+          height: 50%;
+          margin-bottom: 3px;
+
+          img {
+            display: inline-block;
+          }
+        }
+        .top-margin:nth-child(2) {
+          width: 100%;
+          height: 50%;
+          margin-bottom: 3px;
+
+          img {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

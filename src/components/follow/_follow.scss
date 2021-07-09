@@ -1,0 +1,200 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.follow {
+  padding: 60px 0;
+
+  @include respond-to(sm) {
+    padding: 120px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+
+    .heading {
+      margin: 0 auto 40px auto;
+      width: 100%;
+      max-width: 634px;
+      text-align: center;
+
+      @include respond-to(sm) {
+        margin-bottom: 60px;
+        width: 74%;
+      }
+
+      img {
+        display: inline-block;
+        max-width: 100%;
+        width: 32px;
+      }
+
+      h2 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 37px;
+        color: #4d565b;
+      }
+    }
+
+    &--flex > .react-reveal {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include respond-to(sm) {
+        justify-content: space-between;
+      }
+
+      .insta-pic {
+        margin-bottom: 15px;
+        width: 48%;
+        position: relative;
+
+        @include respond-to(sm) {
+          width: 23.8%;
+          height: 100%;
+        }
+
+        .insta-pic-hover {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(218, 217, 215, 0.8);
+          opacity: 0;
+          transition: 0.5s ease;
+          overflow: hidden;
+
+          img {
+            width: 40px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .insta-pic-two {
+        margin-bottom: 15px;
+        width: 48%;
+        position: relative;
+
+        @include respond-to(sm) {
+          width: 23.8%;
+          height: 100%;
+        }
+
+        .insta-pic-hover {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(218, 217, 215, 0.8);
+          opacity: 0;
+          transition: 0.5s ease;
+          overflow: hidden;
+
+          img {
+            width: 40px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .insta-pic-three {
+        margin-bottom: 15px;
+        width: 48%;
+        position: relative;
+
+        @include respond-to(sm) {
+          width: 23.8%;
+          height: 100%;
+        }
+
+        .insta-pic-hover {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(218, 217, 215, 0.8);
+          opacity: 0;
+          transition: 0.5s ease;
+          overflow: hidden;
+
+          img {
+            width: 40px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+
+      .insta-pic-four {
+        margin-bottom: 15px;
+        width: 48%;
+        position: relative;
+
+        @include respond-to(sm) {
+          width: 23.8%;
+          height: 100%;
+        }
+
+        .insta-pic-hover {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          height: 100%;
+          width: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(218, 217, 215, 0.8);
+          opacity: 0;
+          transition: 0.5s ease;
+          overflow: hidden;
+
+          img {
+            width: 40px;
+          }
+          &:hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+}

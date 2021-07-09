@@ -1,0 +1,112 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the header of the site/application.
+// -----------------------------------------------------------------------------
+
+.page-header {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  font-size: 25px;
+
+  @include respond-to(md) {
+    height: 100px;
+  }
+
+  .navbar-bg {
+    position: absolute;
+    background-color: #88969d;
+  }
+
+  &__wrapper {
+    background-color: #88969d;
+    margin: 0 auto;
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .logo {
+      padding-left: 10px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+
+      img {
+        width: 35px;
+      }
+    }
+  }
+
+  &__nav {
+    //DO LATER
+    display: none;
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      list-style: none;
+
+      li {
+        font-size: 16px;
+        padding: 15px 30px;
+        font-weight: 500;
+
+        a {
+          color: #fff;
+        }
+      }
+
+      .active {
+        color: #000;
+      }
+    }
+  }
+
+  &__large {
+    display: none;
+
+    @include respond-to(xl) {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      align-items: center;
+
+      ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 43%;
+
+        li {
+          a {
+            color: #ffffff;
+            font-size: 16px;
+
+            &:hover {
+              color: #000;
+            }
+          }
+        }
+        .active {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  li {
+    list-style: none;
+  }
+}
+.scrolled {
+  background: #000;
+  transition: 0.5s ease-in;
+}

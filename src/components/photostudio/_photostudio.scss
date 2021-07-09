@@ -1,0 +1,106 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.photostudio {
+  background: #eff3fa;
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    margin: 0 auto;
+
+    &--flex {
+      display: flex;
+      align-items: stretch;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+      }
+
+      .image {
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+          overflow: hidden;
+        }
+
+        img {
+          @include respond-to(xsm) {
+            height: 120%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .text {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px 0 45px 0;
+        width: 100%;
+
+        @include respond-to(xsm) {
+          width: 50%;
+          padding: 45px 40px;
+        }
+
+        h3 {
+          margin: 20px 0 10px 0;
+          font-family: "Cormorant Garamond";
+          font-size: 35px;
+          color: #4d565b;
+          text-align: left;
+        }
+
+        .top-margin {
+          margin-top: 40px;
+
+          &--flex {
+            display: flex;
+            align-items: stretch;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+
+            @include respond-to(sm) {
+              flex-direction: row;
+            }
+
+            .mini-feature {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              padding: 10px;
+              width: 100%;
+              border-bottom: 1px solid #88969d;
+
+              @include respond-to(sm) {
+                width: 33.33%;
+                border-bottom: unset;
+                border-right: 1px solid #88969d;
+              }
+
+              img {
+                width: 38px;
+              }
+              .top-margin {
+                margin-top: 10px;
+
+                @include respond-to(sm) {
+                  .title {
+                    text-align: center;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

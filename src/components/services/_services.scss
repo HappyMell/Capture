@@ -1,0 +1,124 @@
+@import "../../sass/abstracts/mixins";
+@import "../../sass/abstracts/variables";
+
+.services {
+  padding: 60px 0;
+
+  @include respond-to(xsm) {
+    padding: 80px 0;
+  }
+
+  @include respond-to(sm) {
+    padding: 120px 0;
+  }
+
+  &__wrapper {
+    padding: 0 25px;
+    width: 100%;
+    height: 100%;
+    max-width: 1075px;
+    position: relative;
+    margin: 0 auto;
+
+    .heading-box {
+      margin: 0 auto 40px auto;
+      width: 100%;
+      max-width: 634px;
+
+      @include respond-to(xsm) {
+        width: 90%;
+      }
+
+      @include respond-to(sm) {
+        width: 74%;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      h2 {
+        margin: 20px 0 10px 0;
+        font-family: "Cormorant Garamond";
+        font-weight: 400;
+        font-size: 37px;
+        color: #4d565b;
+        text-align: center;
+      }
+    }
+
+    &--flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      @include respond-to(xsm) {
+        flex-direction: row;
+        align-items: stretch;
+        justify-content: flex-start;
+      }
+
+      .feature-col {
+        display: block;
+        padding: 30px;
+        width: 100%;
+        max-width: 350px;
+        position: relative;
+
+        @include respond-to(xsm) {
+          width: 33.33%;
+          border-right: 1px solid #88969d;
+        }
+
+        .feature {
+          margin-bottom: 60px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            display: inline-block;
+            width: 100%;
+            width: 40px;
+          }
+
+          .top-margin {
+            margin-top: 20px;
+
+            .title {
+              @include respond-to(xsm) {
+                text-align: center;
+              }
+            }
+          }
+
+          .top-margin-10 {
+            margin-top: 10px;
+
+            p {
+              text-align: center;
+            }
+          }
+        }
+
+        .side-line {
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          top: auto;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: #88969d;
+
+          @include respond-to(xsm) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
